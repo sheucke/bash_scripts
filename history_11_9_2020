@@ -1,0 +1,121 @@
+    1  df
+    2  mkdir hrd
+    3  ls
+    4  logout
+    5  ls
+    6  cd dev
+    7  ls
+    8  cd hrd
+    9  ls
+   10  wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+   11  bash Miniconda3-latest-Linux-x86_64.sh
+   12  exec bash
+   13  ls
+   14  wget ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.alt.fa.gz
+   15  wget https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf
+   16  ls
+   17  rm conda-cheatsheet.pdf 
+   18  ls
+   19  rm Miniconda3-latest-Linux-x86_64.sh 
+   20  conda config --show channels
+   21  conda config --add channels bioconda
+   22  conda config --show channels
+   23  conda config --add channels conda-forge
+   24  conda config --show channels
+   25  conda search SigProfilerMatrixGenerator
+   26  conda search "SigProfilerMatrixGenerator"
+   27  conda create -n hrd
+   28  conda activate hrd
+   29  conda config --show channels
+   30  conda env list
+   31  python
+   32  python3
+   33  python --version
+   34  conda remove
+   35  conda env remove -n hrd
+   36  conda deactivate
+   37  conda env remove -n hrd
+   38  conda env list
+   39  conda create --name hrd python=3.8
+   40  conda activate hrd
+   41  python --version
+   42  conda list
+   43  conda pip install SigProfilerMatrixGenerator
+   44  conda install pip
+   45  pip install SigProfilerMatrixGenerator
+   46  conda list
+   47  python
+   48  wget ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.alt.fa.gz
+   49  ls
+   50  rsync -av rsync:://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.chromosome.1.fa.gz
+   51  rsync -av rsync://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.chromosome.1.fa.gz
+   52  top
+   53  ls
+   54  df
+   55  cd ..
+   56  ls
+   57  cd ..
+   58  ls
+   59  cd miniconda3/
+   60  ls
+   61  cd envs
+   62  ls
+   63  cd hrd
+   64  ls
+   65  ls -a
+   66  ls -alh
+   67  ls
+   68  wgetftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.alt.fa.gz
+   69  wget ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.alt.fa.gz
+   70  curl -O ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.alt.fa.gz
+   71  curl --ftp-ssl ftp://ftp.ensembl.org/pub/release-101/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.alt.fa.gz
+   72  logout
+   73  ls
+   74  cd dev
+   75  ls
+   76  mkdir aln
+   77  cd aln
+   78  conda create -n aln
+   79  conda activate aln
+   80  conda install muscle
+   81  muscle --help
+   82  ls
+   83  ls -lah
+   84  chmod +x get_uniprot_data.sh 
+   85  ls -lah
+   86  ./get_uniprot_data.sh 
+   87  less muscle_input.fasta 
+   88  grep -c '^>' muscle_input.fasta 
+   89  conda env export > aln.yaml
+   90  ./get_uniprot_data.sh 
+   91  less muscle_output.clw 
+   92  git init -b main
+   93  git init
+   94  git add .
+   95  git commit -m "First commit"
+   96  git remote add origin https://github.com/sheucke/bash_scripts.git
+   97  git remote -v
+   98  git push origin master
+   99  cp get_uniprot_data.sh get_sra_data.sh
+  100  conda deactivate
+  101  conda create -n rna-seq 
+  102  conda activate rna-seq
+  103  conda install sra-tools
+  104  fastq-dump -h
+  105  fastq-dump --gzip --defline-qual '+' SRR11412215
+  106  ls -lah
+  107  tail -n +2 SraRunTable.txt | cut -d ',' -f 1
+  108  tail -n +2 SraRunTable.txt | cut -d ',' -f 1 | wc -l
+  109  df 
+  110  chmod +x get_sra_data.sh 
+  111  ./get_sra_data.sh 
+  112  ./get_sra_data.sh | wc -l
+  113  mkdir data
+  114  cd data
+  115  nohup ../get_sra_data.sh &
+  116  cd ..
+  117  rm SRR11412215.fastq.gz 
+  118  history
+  119  cat history > history_11_9_2020
+  120  rm history_11_9_2020 
+  121  history > history_11_9_2020
